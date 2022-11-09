@@ -3865,6 +3865,9 @@ var Popover = /*#__PURE__*/function () {
           options: {
             offset: [0, this._options.offset]
           }
+        }, {
+          name: 'flip',
+          enabled: false
         }]
       });
     }
