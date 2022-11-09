@@ -57,6 +57,10 @@ class Popover {
                         offset: [0, this._options.offset],
                     },
                 },
+                {
+                    name: 'flip',
+                    enabled: false
+                }
             ],
         });
     }
