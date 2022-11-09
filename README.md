@@ -1,3 +1,5 @@
+Modified version by vjuez https://stackoverflow.com/questions/13300137/how-to-edit-a-node-module-installed-via-npm
+
 <p>
     <a href="https://flowbite.com" >
       <img alt="Flowbite - Tailwind CSS components" width="350" src="https://flowbite.s3.amazonaws.com/github/logo-github.png">
@@ -12,7 +14,7 @@
     <a href="https://flowbite.com/docs/getting-started/license/"><img src="https://img.shields.io/badge/license-MIT-blue" alt="Licenese"></a>
 </p>
 
-------
+---
 
 ## Documentation
 
@@ -405,7 +407,7 @@ Flowbite can be included as a plugin into an existing Tailwind CSS project and i
 
 ### Require via NPM
 
-Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" >Tailwind CSS</a> installed. 
+Make sure that you have <a href="https://nodejs.org/en/" rel="nofollow" >Node.js</a> and <a href="https://tailwindcss.com/" rel="nofollow" >Tailwind CSS</a> installed.
 
 1. Install Flowbite as a dependency using NPM by running the following command:
 
@@ -417,12 +419,8 @@ npm i flowbite
 
 ```javascript
 module.exports = {
-
-    plugins: [
-        require('flowbite/plugin')
-    ]
-
-}
+  plugins: [require("flowbite/plugin")],
+};
 ```
 
 3. Include the main JavaScript file to make interactive elements work:
@@ -434,7 +432,7 @@ module.exports = {
 If you use Webpack or other bundlers you can also import it like this:
 
 ```javascript
-import 'flowbite';
+import "flowbite";
 ```
 
 ### Include via CDN
@@ -444,7 +442,10 @@ The quickest way to get started working with FlowBite is to simply include the C
 Require the following minified stylesheet inside the `head` tag:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/flowbite@latest/dist/flowbite.min.css"
+/>
 ```
 
 And include the following javascript file before the end of the `body` element:
@@ -487,6 +488,6 @@ Get access to all premium features including the Figma design system, access to 
 
 ## Copyright and license
 
-The Flowbite name and logos are trademarks of Crafty Dwarf Inc. 
+The Flowbite name and logos are trademarks of Crafty Dwarf Inc.
 
 📝 [Read about the licensing terms](https://flowbite.com/docs/getting-started/license/)

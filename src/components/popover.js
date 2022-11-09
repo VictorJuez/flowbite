@@ -73,6 +73,11 @@ class Popover {
                     showEvents: ['click', 'focus'],
                     hideEvents: ['focusout', 'blur']
                 }
+            case 'manual':
+                return {
+                    showEvents: [],
+                    hideEvents: []
+                }
             default:
                 return {
                     showEvents: ['mouseenter', 'focus'],
