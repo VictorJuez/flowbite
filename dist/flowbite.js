@@ -3471,6 +3471,7 @@ var Tabs = /*#__PURE__*/function () {
     this._items = items;
     this._activeTab = options ? this.getTab(options.defaultTabId) : null;
     this._options = tabs_objectSpread(tabs_objectSpread({}, tabs_Default), options);
+    console.log('options', this._options);
 
     this._init();
   }
@@ -3525,8 +3526,10 @@ var Tabs = /*#__PURE__*/function () {
 
       if (tab === this._activeTab && !forceShow) {
         return;
-      } // hide other tabs
+      }
 
+      console.log('options2', this._options);
+      console.log('items', this._items); // hide other tabs
 
       this._items.map(function (t) {
         if (t !== tab) {
@@ -3542,9 +3545,9 @@ var Tabs = /*#__PURE__*/function () {
       }); // show active tab
 
 
-      (_tab$triggerEl$classL = tab.triggerEl.classList).add.apply(_tab$triggerEl$classL, tabs_toConsumableArray(this._options.activeClasses.split(" ")));
+      (_tab$triggerEl$classL = tab.triggerEl.classList).remove.apply(_tab$triggerEl$classL, tabs_toConsumableArray(this._options.inactiveClasses.split(" ")));
 
-      (_tab$triggerEl$classL2 = tab.triggerEl.classList).remove.apply(_tab$triggerEl$classL2, tabs_toConsumableArray(this._options.inactiveClasses.split(" ")));
+      (_tab$triggerEl$classL2 = tab.triggerEl.classList).add.apply(_tab$triggerEl$classL2, tabs_toConsumableArray(this._options.activeClasses.split(" ")));
 
       tab.triggerEl.setAttribute('aria-selected', true);
       tab.targetEl.classList.remove('hidden');
